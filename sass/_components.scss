@@ -286,7 +286,16 @@
     background: transparent;
     outline: none;
     transition: all .2s;
+    & span
+    {
+        margin-left: 3px;
+        transition:margin-left .2s ;
+    }
 &:hover{
+    span
+    {
+        margin-left: 8px;
+    }
     color: var(--color-Grey-dark-2);
 }
 &:focus
@@ -374,5 +383,76 @@
             margin-right: -1.5rem;
         }
 
+    }
+}
+.review
+{
+    background-color: #fff;
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,0.25);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    &__text
+    {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+
+    }
+    &__user{
+        display: flex;
+        align-items: center;
+
+    }
+    &__photo{
+        height: 4.5rem;
+        width: 4.5rem;
+        margin-right: 1.5rem;
+
+        border-radius: 50%;
+
+    }
+    &__user-box
+    {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        align-items: center;
+
+    }
+    &__user-name{
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: .4rem;
+        text-transform: uppercase;
+
+    }
+    &__user-date
+    {
+        font-size: 1rem;
+        color: var(--color-Grey-dark-2);
+
+
+    }
+    &__rating{
+        font-size: 2.2rem;
+        color: var(--color-primary);
+        font-weight: 300;
+
+    }
+    &::before
+    {
+        content: "\201C";
+        font-size: 20rem;
+        position: absolute;
+        z-index: 1;
+        top: -8rem;
+        left: -1rem;
+        color: var(--color-Grey-light-3);
+        font-family: sans-serif;
     }
 }
