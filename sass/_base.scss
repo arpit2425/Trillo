@@ -15,6 +15,11 @@
     --shadow: 0 2rem 6rem rgba(0,0,0,0.8);
     --line:1px solid var(--color-Grey-light-2);
 }
+$bp-largest:75em;
+$bp-large:68.75em;
+$bp-medium:56.25em;
+$bp-small:39em;
+$bp-smallest:32em;
 *{
     margin: 0;
     padding: 0;
@@ -29,12 +34,17 @@ html
 {
     box-sizing: border-box;
     font-size: 62.5%;
+    @media only screen and(max-width:$bp-large) {
+        font-size: 50%;
+        
+    }
 }
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.4rem;
+   
 }
 body{
     font-family: 'open sans',sans-serif;

@@ -9,6 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media only screen and(max-width:$bp-smallest){
+        order: 1;
+        flex: 0 0 100%;
+        
+    }
     &__box
     {
         font-family: inherit;
@@ -108,9 +113,7 @@
 
 
     }
-    &__user{
-
-    }
+ 
     &__user-photo{
         height: 3.75rem;
         width: 3.75rem;
@@ -119,14 +122,19 @@
 
 
     }
-    &__user-name{
-
-    }
+   
 }
 .side-nav
 {
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-size: 1.4rem;
+    @media only screen and (max-width:$bp-medium) {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+      
+        
+    }
     &__icon
     {
         width: 1.75rem;
@@ -146,6 +154,10 @@
         position: relative;
 
         color: var(--color-Grey-light-1);
+        @media only screen and (max-width:$bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
 
 
     }
@@ -155,11 +167,15 @@
     }
     &__item
     {
-        margin-top: 1rem;
+        
         list-style: none;
         padding: 1.5rem 2rem;
         display: block;
         position: relative;
+        @media only screen and (max-width:$bp-medium) {
+            flex: 1;
+            justify-content: center;
+        }
 
 
 
@@ -194,6 +210,11 @@
     padding: 2.75rem;
     color: var(--color-Grey-light-4);
     text-align: center;
+    @media only screen and (max-width:$bp-medium) {
+       display: none;
+      
+        
+    }
 }
 .gallery
 {
@@ -367,10 +388,10 @@
         color: var(--color-Grey-dark-3);
         margin-right: auto;
     }
-    &__friend
-    {
-        
+    &__friends{
+        display: flex;
     }
+    
     &__photo
     {
         height: 4rem;
@@ -380,7 +401,7 @@
         border-radius: 50%;
         &:not(:last-child)
         {
-            margin-right: -1.5rem;
+            margin-right: -2.5rem;
         }
 
     }
@@ -395,6 +416,10 @@
     display: flex;
     position: relative;
     flex-direction: column;
+    @media only screen and (max-width:$bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
 
     &__text
     {
